@@ -1,0 +1,5 @@
+eln-cache
+*.log
+elpa
+etc
+var
