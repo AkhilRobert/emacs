@@ -23,6 +23,7 @@
         lsp-format-buffer-on-save t
         lsp-completion-provider :capf
         lsp-diagnostics-provider :flymake
+        flymake-indicator-type nil
         flymake-fringe-indicator-position nil
         flymake-error-bitmap nil
         flymake-warning-bitmap nil
