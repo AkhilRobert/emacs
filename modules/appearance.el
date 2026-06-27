@@ -13,15 +13,13 @@
 
 (add-to-list 'custom-theme-load-path user-emacs-directory)
 ;; (load-theme 'vscode-dark-plus t)
-(load-theme 'base16-onedark t)
+(load-theme 'sonokai t)
 (with-eval-after-load 'base16-onedark-theme
   (custom-theme-set-faces
    'base16-onedark
    `(whitespace-hspace ((t ,(list  :background "#282c34" :foreground "#353b45"))))
    `(whitespace-space ((t ,(list  :background "#282c34" :foreground "#353b45"))))
    `(whitespace-tab ((t ,(list :background "#282c34" :foreground "#353b45"))))))
-
-
 
 (set-face-attribute 'default nil :font "Ubuntu Sans Mono-9.5")
 ;; (set-face-attribute 'default nil :font "Ubuntu Sans Mono-10.2")
