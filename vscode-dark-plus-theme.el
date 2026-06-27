@@ -81,17 +81,12 @@
        (vsc-yellow            "#DCDCAA")
        (vsc-pink              "#C586C0"))
 
-  ;; =========================================================================
   ;; Faces
-  ;; =========================================================================
 
   (custom-theme-set-faces
    'vscode-dark-plus
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.1 Core UI: default, cursor, region, hl-line, fringe, shadow, link,
-   ;;              error, success, warning
-   ;; -----------------------------------------------------------------------
+   ;; Core UI
    `(default                          ((t (:background ,vsc-back :foreground ,vsc-front))))
    `(cursor                           ((t (:background ,vsc-cursor-light))))
    `(region                           ((t (:background ,vsc-selection))))
@@ -103,55 +98,39 @@
    `(success                          ((t (:foreground ,vsc-green))))
    `(warning                          ((t (:foreground ,vsc-yellow))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.2 Line numbers
-   ;; -----------------------------------------------------------------------
+   ;; Line numbers
    `(line-number                      ((t (:foreground ,vsc-line-number :background ,vsc-back))))
    `(line-number-current-line         ((t (:foreground ,vsc-popup-front))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.3 Mode-line / header-line
-   ;; -----------------------------------------------------------------------
+   ;; Mode-line / header-line
    `(mode-line                        ((t (:foreground ,vsc-front :background ,vsc-left-mid))))
    `(mode-line-inactive               ((t (:foreground ,vsc-front :background ,vsc-left-dark))))
    `(header-line                      ((t (:foreground ,vsc-front :background ,vsc-left-dark))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.4 Window dividers
-   ;; -----------------------------------------------------------------------
+   ;; Window dividers
    `(vertical-border                  ((t (:foreground ,vsc-split-dark))))
    `(window-divider                   ((t (:foreground ,vsc-split-dark))))
    `(window-divider-first-pixel       ((t (:foreground ,vsc-split-dark))))
    `(window-divider-last-pixel        ((t (:foreground ,vsc-split-dark))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.5 Minibuffer, highlight, secondary-selection
-   ;; -----------------------------------------------------------------------
+   ;; Minibuffer, highlight, secondary-selection
    `(minibuffer-prompt                ((t (:foreground ,vsc-blue))))
    `(highlight                        ((t (:background ,vsc-dim-highlight))))
    `(secondary-selection              ((t (:background ,vsc-dim-highlight))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.6 Search / match
-   ;; -----------------------------------------------------------------------
+   ;; Search / match
    `(isearch                          ((t (:background ,vsc-search-current))))
    `(lazy-highlight                   ((t (:background ,vsc-search))))
    `(match                            ((t (:background ,vsc-search))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.7 Show-paren
-   ;; -----------------------------------------------------------------------
+   ;; Show-paren
    `(show-paren-match                 ((t (:background ,vsc-dim-highlight))))
    `(show-paren-mismatch              ((t (:foreground ,vsc-red))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 3.8 Tooltip
-   ;; -----------------------------------------------------------------------
+   ;; Tooltip
    `(tooltip                          ((t (:background ,vsc-popup-back :foreground ,vsc-popup-front))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 2.1 Font-lock syntax faces
-   ;; -----------------------------------------------------------------------
+   ;; Font-lock syntax faces
    `(font-lock-keyword-face           ((t (:foreground ,vsc-blue))))
    `(font-lock-function-name-face     ((t (:foreground ,vsc-yellow))))
    `(font-lock-function-call-face     ((t (:foreground ,vsc-yellow))))
@@ -174,9 +153,7 @@
    `(font-lock-warning-face           ((t (:foreground ,vsc-yellow))))
    `(font-lock-negation-char-face     ((t (:foreground ,vsc-front))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.1 Corfu
-   ;; -----------------------------------------------------------------------
+   ;; Corfu
    `(corfu-default                    ((t (:background ,vsc-popup-back))))
    `(corfu-current                    ((t (:background ,vsc-popup-hl-blue))))
    `(corfu-bar                        ((t (:background ,vsc-split-dark))))
@@ -184,22 +161,16 @@
    `(corfu-annotations                ((t (:foreground ,vsc-popup-front))))
    `(corfu-deprecated                 ((t (:foreground ,vsc-line-number :strike-through t))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.2 Vertico
-   ;; -----------------------------------------------------------------------
+   ;; Vertico
    `(vertico-current                  ((t (:background ,vsc-popup-hl-blue))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.3 Orderless
-   ;; -----------------------------------------------------------------------
+   ;; Orderless
    `(orderless-match-face-0           ((t (:foreground ,vsc-blue))))
    `(orderless-match-face-1           ((t (:foreground ,vsc-pink))))
    `(orderless-match-face-2           ((t (:foreground ,vsc-blue-green))))
    `(orderless-match-face-3           ((t (:foreground ,vsc-yellow))))
 
-    ;; -----------------------------------------------------------------------
-    ;; 4.4 Magit
-    ;; -----------------------------------------------------------------------
+    ;; Magit
     `(magit-branch-local               ((t (:foreground ,vsc-blue))))
     `(magit-branch-remote              ((t (:foreground ,vsc-blue-green))))
     `(magit-hash                       ((t (:foreground ,vsc-line-number))))
@@ -225,28 +196,18 @@
     `(magit-diff-their-highlight       ((t (:background ,vsc-diff-red-light :foreground ,vsc-git-deleted :extend t))))
     `(magit-diff-whitespace-warning    ((t (:background ,vsc-red :foreground ,vsc-back :extend t))))
 
-   ;; -----------------------------------------------------------------------
-    ;; 4.4a Diff-refine (word-level highlights inside diff hunks)
-    ;;      Emacs defaults are #aaffaa / #ffaaaa -- far too bright for dark themes.
-    ;; -----------------------------------------------------------------------
+    ;; Diff-refine
     `(diff-refine-added                ((t (:background ,vsc-diff-green-refine))))
     `(diff-refine-removed              ((t (:background ,vsc-diff-red-refine))))
     `(diff-refine-changed              ((t (:background ,vsc-diff-yellow-light))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.5 Doom-modeline (inherits from mode-line faces set in 3.3)
-   ;; -----------------------------------------------------------------------
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.6 Flymake
-   ;; -----------------------------------------------------------------------
+   ;; Flymake
    `(flymake-error                    ((t (:underline (:style wave :color ,vsc-red)))))
    `(flymake-warning                  ((t (:underline (:style wave :color ,vsc-yellow)))))
    `(flymake-note                     ((t (:underline (:style wave :color ,vsc-blue)))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.7 Eglot (inlay hints + semantic token faces)
-   ;; -----------------------------------------------------------------------
+   ;; Eglot
    `(eglot-inlay-hint-face            ((t (:foreground ,vsc-line-number))))
    ;; Semantic token type faces — fix defaults that don't match vscode.nvim
    `(eglot-semantic-number            ((t (:inherit font-lock-number-face))))
@@ -262,16 +223,12 @@
    `(eglot-semantic-abstract          ((t nil)))
    `(eglot-semantic-async             ((t nil)))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.8 Which-key
-   ;; -----------------------------------------------------------------------
+   ;; Which-key
    `(which-key-key-face               ((t (:foreground ,vsc-yellow))))
    `(which-key-command-description-face ((t (:foreground ,vsc-blue))))
    `(which-key-separator-face         ((t (:foreground ,vsc-line-number))))
 
-    ;; -----------------------------------------------------------------------
-    ;; 4.9 Diff-mode
-    ;; -----------------------------------------------------------------------
+    ;; Diff-mode
     `(diff-added                       ((t (:foreground ,vsc-git-added :background ,vsc-diff-green-dark :extend t))))
     `(diff-removed                     ((t (:foreground ,vsc-git-deleted :background ,vsc-diff-red-dark :extend t))))
     `(diff-changed                     ((t (:foreground ,vsc-yellow :background ,vsc-diff-yellow-dark :extend t))))
@@ -283,17 +240,13 @@
     `(diff-header                      ((t (:foreground ,vsc-blue :background ,vsc-diff-file :extend t))))
     `(diff-hunk-header                 ((t (:foreground ,vsc-popup-front :background ,vsc-diff-hunk :extend t))))
 
-    ;; -----------------------------------------------------------------------
-    ;; 4.11 Dired
-    ;; -----------------------------------------------------------------------
+    ;; Dired
     `(dired-directory                  ((t (:foreground ,vsc-blue))))
     `(dired-symlink                    ((t (:foreground ,vsc-blue-green))))
     `(dired-marked                     ((t (:foreground ,vsc-yellow))))
     `(dired-flagged                    ((t (:foreground ,vsc-red))))
 
-    ;; -----------------------------------------------------------------------
-    ;; 4.12 Whitespace (subtle, matching line-number color)
-    ;; -----------------------------------------------------------------------
+    ;; Whitespace
     `(whitespace-space                 ((t (:foreground ,vsc-whitespace :background ,vsc-back))))
     `(whitespace-tab                   ((t (:foreground ,vsc-whitespace :background ,vsc-back))))
     `(whitespace-newline               ((t (:foreground ,vsc-whitespace :background ,vsc-back))))
@@ -301,9 +254,7 @@
     `(whitespace-line                  ((t (:foreground ,vsc-whitespace :background ,vsc-back))))
     `(whitespace-indentation           ((t (:foreground ,vsc-whitespace :background ,vsc-back))))
 
-    ;; -----------------------------------------------------------------------
-    ;; 4.13 Markdown
-    ;; -----------------------------------------------------------------------
+    ;; Markdown
    `(markdown-header-face-1           ((t (:foreground ,vsc-blue))))
    `(markdown-header-face-2           ((t (:foreground ,vsc-yellow))))
    `(markdown-header-face-3           ((t (:foreground ,vsc-blue-green))))
@@ -313,9 +264,7 @@
    `(markdown-code-face               ((t (:background ,vsc-left-dark))))
    `(markdown-inline-code-face        ((t (:foreground ,vsc-orange))))
 
-   ;; -----------------------------------------------------------------------
-   ;; 4.13 Org-mode
-   ;; -----------------------------------------------------------------------
+   ;; Org-mode
    `(org-level-1                      ((t (:foreground ,vsc-blue))))
    `(org-level-2                      ((t (:foreground ,vsc-yellow))))
    `(org-level-3                      ((t (:foreground ,vsc-blue-green))))
@@ -328,29 +277,20 @@
    `(org-block                        ((t (:background ,vsc-left-dark))))
    `(org-link                         ((t (:foreground ,vsc-blue :underline t)))))
 
-  ;; =========================================================================
-  ;; 5.1 ANSI Terminal Colors
-  ;; =========================================================================
+  ;; ANSI Terminal Colors
 
   (custom-theme-set-variables
    'vscode-dark-plus
    `(ansi-color-names-vector
      [,vsc-back ,vsc-red ,vsc-green ,vsc-yellow
       ,vsc-blue ,vsc-pink ,vsc-blue-green ,vsc-front])
-   ;; Level 4 enables function-call and variable-use faces needed to
-   ;; match vscode.nvim's full semantic highlighting.
-   '))
+   ))
 
 ;; ===========================================================================
-;; 6. Treesit Keyword Split
+;; Treesit Keyword Split
 ;; ===========================================================================
 
-(defvar vscode-dark-plus--treesit-hooks nil
-  "List of (hook . function) pairs installed by the theme for cleanup.")
-
-;; ---------------------------------------------------------------------------
-;; 6.1 Control-flow keyword lists per language
-;; ---------------------------------------------------------------------------
+;; Control-flow keyword lists per language
 
 (defconst vscode-dark-plus--go-control-flow
   '("if" "else" "for" "return" "switch" "case" "break" "continue"
@@ -373,9 +313,7 @@
     "co_await" "co_return" "co_yield")
   "C++ control-flow keywords (Pink).")
 
-;; ---------------------------------------------------------------------------
-;; 6.2 Helpers to append treesit font-lock rules with :override t
-;; ---------------------------------------------------------------------------
+;; Helpers to append treesit font-lock rules with :override t
 
 (defun vscode-dark-plus--register-feature (feature level)
   "Register FEATURE in `treesit-font-lock-feature-list' at LEVEL (0-indexed).
@@ -410,9 +348,7 @@ KEYWORDS is a list of keyword strings."
    (list (apply #'vector keywords)
          '@vscode-dark-plus-keyword-control)))
 
-;; ---------------------------------------------------------------------------
-;; 6.3 Mode hooks
-;; ---------------------------------------------------------------------------
+;; Mode hooks
 
 (defun vscode-dark-plus--setup-go-keywords ()
   "Install keyword-split and face-fix rules for `go-ts-mode'."
@@ -467,38 +403,10 @@ KEYWORDS is a list of keyword strings."
                   (rust-ts-mode-hook . vscode-dark-plus--setup-rust-keywords)
                   (c-ts-mode-hook    . vscode-dark-plus--setup-c-keywords)
                   (c++-ts-mode-hook  . vscode-dark-plus--setup-cpp-keywords)))
-    (add-hook (car pair) (cdr pair))
-    (push pair vscode-dark-plus--treesit-hooks)))
-
-;; ===========================================================================
-;; 7. Theme Cleanup
-;; ===========================================================================
-
-;; ---------------------------------------------------------------------------
-;; 7.1 Cleanup function
-;; ---------------------------------------------------------------------------
-
-(defun vscode-dark-plus--remove-hooks ()
-  "Remove all treesit keyword-split hooks installed by the theme."
-  (dolist (pair vscode-dark-plus--treesit-hooks)
-    (remove-hook (car pair) (cdr pair)))
-  (setq vscode-dark-plus--treesit-hooks nil))
-
-;; ---------------------------------------------------------------------------
-;; 7.2 Advice on disable-theme for automatic cleanup
-;; ---------------------------------------------------------------------------
-
-(defun vscode-dark-plus--on-disable (theme)
-  "Clean up treesit hooks when vscode-dark-plus THEME is disabled."
-  (when (eq theme 'vscode-dark-plus)
-    (vscode-dark-plus--remove-hooks)))
-
-(advice-add 'disable-theme :before #'vscode-dark-plus--on-disable)
+    (add-hook (car pair) (cdr pair))))
 
 ;; Install hooks now
 (vscode-dark-plus--install-hooks)
-
-;; ===========================================================================
 
 (provide-theme 'vscode-dark-plus)
 ;;; vscode-dark-plus-theme.el ends here

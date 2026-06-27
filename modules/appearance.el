@@ -13,7 +13,7 @@
 
 (add-to-list 'custom-theme-load-path user-emacs-directory)
 ;; (load-theme 'vscode-dark-plus t)
-(load-theme 'sonokai t)
+(load-theme 'vscode-dark-plus t)
 (with-eval-after-load 'base16-onedark-theme
   (custom-theme-set-faces
    'base16-onedark
