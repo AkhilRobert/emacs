@@ -124,7 +124,8 @@
    `(match                            ((t (:background ,vsc-search))))
 
    ;; Show-paren
-   `(show-paren-match                 ((t (:background ,vsc-dim-highlight))))
+   `(show-paren-match                 ((t (:background ,vsc-search-current))))
+   `(show-paren-match-expression      ((t (:background ,vsc-cursor-dark-dark))))
    `(show-paren-mismatch              ((t (:foreground ,vsc-red))))
 
    ;; Tooltip
@@ -143,8 +144,8 @@
    `(font-lock-constant-face          ((t (:foreground ,vsc-accent-blue))))
    `(font-lock-number-face            ((t (:foreground ,vsc-light-green))))
    `(font-lock-operator-face          ((t (:foreground ,vsc-front))))
-   `(font-lock-bracket-face           ((t (:foreground ,vsc-front))))
-   `(font-lock-delimiter-face         ((t (:foreground ,vsc-front))))
+   `(font-lock-bracket-face           ((t (:foreground ,vsc-popup-front))))
+   `(font-lock-delimiter-face         ((t (:foreground ,vsc-popup-front))))
    `(font-lock-escape-face            ((t (:foreground ,vsc-yellow-orange))))
    `(font-lock-preprocessor-face      ((t (:foreground ,vsc-pink))))
    `(font-lock-builtin-face           ((t (:foreground ,vsc-blue))))
