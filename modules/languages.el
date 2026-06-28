@@ -23,7 +23,9 @@
   :hook ((rust-mode . subword-mode))
   :custom
   (rust-format-on-save nil)
-  (rust-format-show-buffer nil))
+  (rust-format-show-buffer nil)
+  :config
+  (set-face-attribute 'rust-string-interpolation nil :slant 'normal))
 
 ;; Compilation buffer colorization (preserved from old config)
 (defun my/colorize-compilation-buffer ()

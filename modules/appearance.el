@@ -39,7 +39,8 @@
  '(font-lock-constant-face ((t (:weight normal))))
  '(font-lock-comment-face ((t (:slant normal))))
  '(font-lock-doc-face ((t (:slant normal))))
- '(font-lock-string-face ((t (:slant normal)))))
+ '(font-lock-string-face ((t (:slant normal))))
+ '(font-lock-escape-face ((t (:slant normal)))))
 
 (use-package pulsar
   :config
